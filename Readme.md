@@ -43,7 +43,8 @@ cd Edgefleet_Assignment
 pip install -r requirements.txt
 ```
 
-2. Inference (Running on Test Videos)
+### 2. Inference (Running on Test Videos)
+
 To generate annotations and tracking videos for the test set:
 
 Place input videos in a folder named test_videos/ (outside the repo to save space) or update path in inference.py.
