@@ -14,7 +14,20 @@ A computer vision pipeline built for the **EdgeFleet.AI Assessment**. This syste
 
 ## 📂 Repository Structure
 
-EdgeFleet_Assessment/ ├── code/ │   ├── train.py           # Training script (Transfer Learning) │   ├── inference.py       # Main pipeline (Detection + Tracking + Smoothing) │   └── create_subset.py   # Utility for data management ├── annotations/           # Output CSV files ├── results/               # Output Processed Videos ├── models/                # Trained YOLOv8 weights (best.pt) ├── Report.pdf             # Detailed technical report └── requirements.txt       # Python dependencies
+EdgeFleet_Assessment/
+├── code/
+│   ├── train.py          # Training script (Transfer Learning with YOLOv8)
+│   ├── inference.py      # Main pipeline (Detection + Tracking + Smoothing)
+│   └── create_subset.py  # Utility script for dataset management
+│
+├── annotations/          # Generated CSV files (tracking & smoothing outputs)
+├── results/              # Output processed videos
+├── models/               # Trained YOLOv8 weights (best.pt)
+│
+├── Report.pdf            # Detailed technical report
+├── requirements.txt      # Python dependencies
+└── README.md             # Project documentation
+
 
 ## 🚀 Setup & Usage
 
