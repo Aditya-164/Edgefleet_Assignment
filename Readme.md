@@ -56,21 +56,26 @@ python inference.py
 ```
 
 Results will be saved to results/ and annotations/.
-3. Training (Reproducibility)
+
+### 3. Training (Reproducibility)
 To replicate the training process:
 
 Download the "Cricket Ball" dataset from Roboflow (YOLOv8 format).
+Link: https://universe.roboflow.com/cricket-ball-tracking-dataset/cricket-dataset-z2wkt/dataset/5
 Update dataset/data.yaml paths.
-Run:
 
+Run:
+```bash
 cd code
 
 python train.py
-🧠 Methodology
+```
+
+## 🧠 Methodology
 Data Strategy: Trained on an external open-source dataset (1,500 images) to prevent data leakage from test videos.
 Filtering: Implemented Spatial Consistency Checks to reject false positives (e.g., white shoes) based on unrealistic movement speed.
 Smoothing: Uses linear interpolation to fill missing detections during motion blur.
-📝 Limitations
+## 📝 Limitations
 Trained on CPU with a subset of data. Full GPU training on the complete dataset would further improve accuracy.
 Simple physics-based tracking used; Kalman filters recommended for production V2.
 
