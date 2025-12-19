@@ -60,9 +60,10 @@ Results will be saved to results/ and annotations/.
 ### 3. Training (Reproducibility)
 To replicate the training process:
 
-Download the "Cricket Ball" dataset from Roboflow (YOLOv8 format).
-Link: https://universe.roboflow.com/cricket-ball-tracking-dataset/cricket-dataset-z2wkt/dataset/5
-Update dataset/data.yaml paths.
+1. Download the **Cricket Ball** dataset in **YOLOv8 format** from Roboflow:  
+   👉 https://universe.roboflow.com/cricket-ball-tracking-dataset/cricket-dataset-z2wkt/dataset/5
+2. Update the dataset paths inside `dataset/data.yaml`.
+3. Run the training script:
 
 Run:
 ```bash
@@ -72,12 +73,13 @@ python train.py
 ```
 
 ## 🧠 Methodology
-Data Strategy: Trained on an external open-source dataset (1,500 images) to prevent data leakage from test videos.
-Filtering: Implemented Spatial Consistency Checks to reject false positives (e.g., white shoes) based on unrealistic movement speed.
-Smoothing: Uses linear interpolation to fill missing detections during motion blur.
+Data Strategy: 
+1. Trained on an external open-source dataset (1,500 images) to prevent data leakage from test videos.
+2. Filtering: Implemented Spatial Consistency Checks to reject false positives (e.g., white shoes) based on unrealistic movement speed.
+3. Smoothing: Uses linear interpolation to fill missing detections during motion blur.
 ## 📝 Limitations
-Trained on CPU with a subset of data. Full GPU training on the complete dataset would further improve accuracy.
-Simple physics-based tracking used; Kalman filters recommended for production V2.
+1. Trained on CPU with a subset of data. Full GPU training on the complete dataset would further improve accuracy.
+2. Simple physics-based tracking used; Kalman filters recommended for production V2.
 
 ---
 
